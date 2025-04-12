@@ -1,0 +1,16 @@
+.productLayout {
+  display: flex;
+}
+
+.gridContainer {
+  flex: 1;
+  container-type: inline-size;
+  container-name: product-grid;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}

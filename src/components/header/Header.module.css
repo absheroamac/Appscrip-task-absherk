@@ -1,0 +1,33 @@
+.logoText {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.headerDash {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  padding: 2rem 0rem;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.smInvisible {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .smInvisible {
+    display: block;
+  }
+
+  .menuIcon {
+    display: none;
+  }
+}

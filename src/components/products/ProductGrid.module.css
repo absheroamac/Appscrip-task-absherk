@@ -1,0 +1,26 @@
+/* Grid container gets container context */
+.gridContainer {
+  container-type: inline-size;
+  container-name: product-grid;
+}
+
+/* Actual grid layout */
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
+}
+
+/* When container is smaller than 900px, switch to 3 columns */
+@container product-grid (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Optional: shrink further on very small widths */
+@container product-grid (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

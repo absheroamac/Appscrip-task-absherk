@@ -1,0 +1,37 @@
+.bannerContainer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #000000;
+  color: #eb4c6b;
+  padding: 0.5rem;
+}
+
+.bannerItem {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.item1,
+.item2 {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .item1 {
+    display: flex;
+  }
+}
+
+@media (min-width: 960px) {
+  .item2 {
+    display: flex;
+  }
+}
+
+@media (min-width: var(--breakpoint-lg)) {
+}
+
+@media (min-width: var(--breakpoint-xl)) {
+}

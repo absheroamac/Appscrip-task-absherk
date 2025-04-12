@@ -1,0 +1,9 @@
+.filterPanel {
+  width: 300px;
+  height: 1018px;
+  background-color: black;
+}
+
+.hidden {
+  display: none;
+}
