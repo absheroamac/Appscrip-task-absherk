@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import ButtonArrow from "../../assets/buttonArrow.svg";
-import { useFilterVisibility } from "../context/FilterContext";
+import ButtonArrow from "../../../assets/buttonArrow.svg";
+import { useFilterVisibility } from "../../context/FilterContext";
 import style from "./HideFilter.module.css";
 
 const HideFilter = () => {

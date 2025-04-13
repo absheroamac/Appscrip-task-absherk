@@ -21,7 +21,9 @@ const menuItems = [
 const Header = () => {
   return (
     <div className="container">
+      {/* Header Container */}
       <header>
+        {/* Header Dash */}
         <div className={style.headerDash}>
           <div>
             <button className={style.menuIcon}>
@@ -50,6 +52,7 @@ const Header = () => {
           </div>
         </div>
 
+        {/* Header Navigation */}
         <nav className={style.nav}>
           {menuItems.map((item, idx) => (
             <a href={item.link} key={idx} className={style.menuItems}>
@@ -58,7 +61,11 @@ const Header = () => {
           ))}
         </nav>
       </header>
+
+      {/* Horizontal Divider */}
       <hr></hr>
+
+      {/* Scalable Mobile Nav */}
       <nav className={style.mobileNav}>
         <MobileNav headers={["HOME", "SHOP"]} current={"SHOP"} />
       </nav>

@@ -42,7 +42,6 @@ button {
 }
 
 :root {
-  /* Modern breakpoints */
   --breakpoint-xs: 0px;
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
@@ -50,7 +49,6 @@ button {
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1440px;
 
-  /* Container max widths */
   --container-max-width-sm: 600px;
   --container-max-width-md: 720px;
   --container-max-width-lg: 960px;

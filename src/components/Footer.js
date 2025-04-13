@@ -6,13 +6,15 @@ import Image from "next/image";
 import InstagramIcon from "../assets/footer/instagram.svg";
 import LinkedInIcon from "../assets/footer/linkedin.svg";
 import AcceptsIcons from "../assets/footer/acceptsIcons.png";
-import Collapsible from "./filterPanel/Collapsible";
+import Collapsible from "./shopLayout/filtering/filterPanel/Collapsible";
 
 const Footer = () => {
   return (
     <footer className={style.footer}>
       <div className="container">
+        {/* First Grid */}
         <div className={style.firstGrid}>
+          {/*  First Container */}
           <div className={style.firstContainer}>
             <div className={style.content}>
               <h4>BE THE FIRST TO KNOW</h4>
@@ -28,6 +30,7 @@ const Footer = () => {
             </div>
             <hr className={style.smVisible} />
           </div>
+          {/*  Second Container */}
           <div className={style.secondContainer}>
             <div className={`${style.content} ${style.contactUs}`}>
               <h4>CONTACT US</h4>
@@ -59,7 +62,9 @@ const Footer = () => {
         </div>
         <hr />
 
+        {/* Second Grid */}
         <div className={style.secondGrid}>
+          {/* First Container md */}
           <div className={`${style.content} ${style.smHidden}`}>
             <h4>mettā muse</h4>
             <ul>
@@ -83,7 +88,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
+          {/* First Container sm */}
           <div className={style.smVisible}>
             <Collapsible title={"mettā muse"} className={style.content}>
               <ul>
@@ -108,7 +113,7 @@ const Footer = () => {
               </ul>
             </Collapsible>
           </div>
-
+          {/* Second Container md */}
           <hr className={style.smVisible} />
           <div className={`${style.content} ${style.smHidden}`}>
             <h4>Quick Links</h4>
@@ -136,7 +141,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
+          {/* Second Container sm */}
           <div className={style.smVisible}>
             <Collapsible title={"QUICK LINKS"} className={style.content}>
               <ul>
@@ -166,7 +171,7 @@ const Footer = () => {
           </div>
 
           <hr className={style.smVisible} />
-
+          {/* Third Container md */}
           <div className={`${style.thirdContainer} ${style.smHidden}`}>
             <div className={style.content}>
               <h4>Follow Us</h4>
@@ -191,6 +196,8 @@ const Footer = () => {
               />
             </div>
           </div>
+
+          {/* Third Container sm */}
 
           <div className={style.smVisible}>
             <Collapsible title={"FOLLOW US"} className={style.content}>

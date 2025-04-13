@@ -4,9 +4,10 @@
 }
 
 .bottom {
+  font-size: 10px;
   display: flex;
   gap: 1rem;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   padding: 0.5rem 0rem;
 }
@@ -18,6 +19,11 @@
 .link {
   text-decoration: underline;
   cursor: pointer;
+  color: #888792;
+}
+
+.bottom p {
+  color: #888792;
 }
 
 .imageContainer {
@@ -31,6 +37,7 @@
 }
 
 .titleContainer h4 {
+  font-size: 14px;
   width: 90%;
   white-space: nowrap;
   overflow: hidden;
@@ -47,4 +54,23 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) {
+  .titleContainer h4 {
+    font-size: 18px;
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .bottom {
+    display: flex;
+    font-size: 14px;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.5rem 0rem;
+  }
 }

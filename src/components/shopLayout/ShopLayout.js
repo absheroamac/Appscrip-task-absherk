@@ -1,10 +1,10 @@
-import ProductGrid from "./products/ProductGrid";
-import HideFilter from "./products/HideFilter";
-import DropDown from "./header/DropDown";
-import FilterPanel from "./products/FilterPanel";
-import { FilterProvider } from "./context/FilterContext";
-import styles from "./Products.module.css";
-import FilterButton from "./products/FilterButton";
+import ProductGrid from "../products/ProductGrid";
+import HideFilter from "./filtering/HideFilter";
+import DropDown from "../header/DropDown";
+import FilterPanel from "./filtering/FilterPanel";
+import { FilterProvider } from "../context/FilterContext";
+import styles from "./ShopLayout.module.css";
+import FilterButton from "./filtering/FilterButton";
 
 const sortBy = [
   "RECOMMENDED",
@@ -14,10 +14,12 @@ const sortBy = [
   "PRICE:LOW TO HIGH",
 ];
 
-const Products = async ({ products, totalCount }) => {
+const ShopLayout = async ({ products, totalCount }) => {
   return (
     <div className={`${styles.container} container`}>
+      {/* Filter Provider, Provide Context */}
       <FilterProvider>
+        {/* Top Bar */}
         <div className={styles.topBarContainer}>
           <hr />
           <div className={styles.topBar}>
@@ -26,12 +28,17 @@ const Products = async ({ products, totalCount }) => {
                 <span>{totalCount}</span> ITEM
               </span>
 
+              {/* Button To Hide/Show Filter on Desktop */}
               <HideFilter />
             </div>
+
+            {/* Button To Hide/Show Filter on Mobile */}
             <div className={`${styles.smVisible} ${styles.filterButton}`}>
               <FilterButton />
             </div>
             <div className={styles.divider}></div>
+
+            {/* Drop down Menu */}
             <div className={styles.sortBy}>
               <DropDown options={sortBy} />
             </div>
@@ -40,7 +47,9 @@ const Products = async ({ products, totalCount }) => {
         </div>
 
         <div className={styles.productLayout}>
+          {/* Filtering Panel */}
           <FilterPanel />
+          {/* Product Grid */}
           <div className={styles.gridContainer}>
             <ProductGrid products={products} />
           </div>
@@ -50,4 +59,4 @@ const Products = async ({ products, totalCount }) => {
   );
 };
 
-export default Products;
+export default ShopLayout;

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Tick from "../../assets/tick.svg";
+import Tick from "../../../../assets/tick.svg";
 import style from "./CheckBox.module.css";
 
 const CheckBox = ({ title, handler }) => {

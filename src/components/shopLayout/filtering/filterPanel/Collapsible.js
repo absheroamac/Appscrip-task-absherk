@@ -1,12 +1,15 @@
-import React, { useState } from "react";
-import style from "./DropDownOptions.module.css";
-import ArrowIcon from "../../assets/arrow.svg";
+"use client";
+import React from "react";
+import style from "./Collapsible.module.css";
+import ArrowIcon from "../../../../assets/arrow.svg";
+import { useState } from "react";
 
-const DropDownOptions = ({ title, options }) => {
+const Collapsible = ({ children, title }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dynamicStyle = {
     arrow: {
       transform: isOpen ? "rotate(180deg)" : "rotate(0)",
+      fill: "white",
     },
 
     container: {
@@ -17,6 +20,7 @@ const DropDownOptions = ({ title, options }) => {
   const handleOpen = () => {
     setIsOpen((prev) => !prev);
   };
+
   return (
     <div className={style.container}>
       <div className={style.header} onClick={handleOpen}>
@@ -25,10 +29,10 @@ const DropDownOptions = ({ title, options }) => {
       </div>
 
       <div className={style.options} style={dynamicStyle.container}>
-        <span>All</span>
+        {children}
       </div>
     </div>
   );
 };
 
-export default DropDownOptions;
+export default Collapsible;

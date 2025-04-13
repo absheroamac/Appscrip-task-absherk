@@ -1,7 +1,7 @@
 "use client";
-import { useFilterVisibility } from "../context/FilterContext";
-import CheckBox from "../filterPanel/CheckBox";
-import DropDownOptions from "../filterPanel/DropDownOptions";
+import { useFilterVisibility } from "../../context/FilterContext";
+import CheckBox from "./filterPanel/CheckBox";
+import DropDownOptions from "./filterPanel/DropDownOptions";
 import styles from "./FilterPanel.module.css"; // Create this file if needed
 
 const FilterPanel = () => {
@@ -9,6 +9,7 @@ const FilterPanel = () => {
   return (
     <div className={`${styles.filterPanel} ${visible ? "" : styles.hidden}`}>
       <div className={styles.filterContainer}>
+        <h4 className={styles.title}>Filter</h4>
         <CheckBox title={"Customizble"} />
         <hr />
         <DropDownOptions title={"IDEAL FOR"} />

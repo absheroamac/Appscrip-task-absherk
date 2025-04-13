@@ -44,6 +44,11 @@ body.panel-open {
   z-index: 21; /* Ensure button is above content */
 }
 
+.title {
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
 /* Desktop adjustments */
 @media (min-width: 768px) {
   .filterPanel {
@@ -69,5 +74,9 @@ body.panel-open {
 
   .button {
     display: none; /* Hide button on desktop */
+  }
+
+  .title {
+    display: none;
   }
 }
