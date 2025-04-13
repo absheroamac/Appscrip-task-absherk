@@ -10,3 +10,21 @@
   flex-direction: column;
   gap: 0.25rem;
 }
+
+.unselect {
+  color: #bfc8cd;
+  text-decoration: underline;
+}
+
+.options {
+  margin-top: 1rem;
+}
+
+.optionsContainer {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}

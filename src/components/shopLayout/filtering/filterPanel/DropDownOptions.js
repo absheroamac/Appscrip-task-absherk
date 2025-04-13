@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import style from "./DropDownOptions.module.css";
 import ArrowIcon from "../../../../assets/arrow.svg";
+import CheckBox from "./CheckBox";
 
 const DropDownOptions = ({ title, options }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,9 +24,17 @@ const DropDownOptions = ({ title, options }) => {
         <span>{title}</span>
         <ArrowIcon style={dynamicStyle.arrow} />
       </div>
+      <span>All</span>
 
       <div className={style.options} style={dynamicStyle.container}>
-        <span>All</span>
+        <div className={style.unselect}>
+          <a>Unselect all</a>
+        </div>
+        <div className={style.optionsContainer}>
+          {options.map((item, idx) => (
+            <CheckBox key={idx} title={item} variant={"sm"} />
+          ))}
+        </div>
       </div>
     </div>
   );

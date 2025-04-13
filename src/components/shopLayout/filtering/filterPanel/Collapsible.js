@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import style from "./Collapsible.module.css";
-import ArrowIcon from "../../../../assets/arrow.svg";
+import ArrowIcon from "../../../../assets/arrowWhite.svg";
 import { useState } from "react";
 
 const Collapsible = ({ children, title }) => {
@@ -9,7 +9,6 @@ const Collapsible = ({ children, title }) => {
   const dynamicStyle = {
     arrow: {
       transform: isOpen ? "rotate(180deg)" : "rotate(0)",
-      fill: "white",
     },
 
     container: {

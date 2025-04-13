@@ -10,3 +10,8 @@
   flex-direction: column;
   gap: 0.25rem;
 }
+
+.unselect {
+  color: #bfc8cd;
+  text-decoration: underline;
+}

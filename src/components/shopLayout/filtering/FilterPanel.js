@@ -10,23 +10,47 @@ const FilterPanel = () => {
     <div className={`${styles.filterPanel} ${visible ? "" : styles.hidden}`}>
       <div className={styles.filterContainer}>
         <h4 className={styles.title}>Filter</h4>
-        <CheckBox title={"Customizble"} />
+        <CheckBox title={"CUSTOMIZBLE"} />
         <hr />
-        <DropDownOptions title={"IDEAL FOR"} />
+        <DropDownOptions
+          title={"IDEAL FOR"}
+          options={["Men", "Women", "Baby & Kids"]}
+        />
         <hr />
-        <DropDownOptions title={"OCCATION"} />
+        <DropDownOptions
+          title={"OCCATION"}
+          options={["Men", "Women", "Baby & Kids"]}
+        />
         <hr />
-        <DropDownOptions title={"WORK"} />
+        <DropDownOptions
+          title={"WORK"}
+          options={["Men", "Women", "Baby & Kids"]}
+        />
         <hr />
-        <DropDownOptions title={"FABRIC"} />
+        <DropDownOptions
+          title={"FABRIC"}
+          options={["Men", "Women", "Baby & Kids"]}
+        />
         <hr />
-        <DropDownOptions title={"SEGMENT"} />
+        <DropDownOptions
+          title={"SEGMENT"}
+          options={["Men", "Women", "Baby & Kids"]}
+        />
         <hr />
-        <DropDownOptions title={"SUITABLE FOR"} />
+        <DropDownOptions
+          title={"SUITABLE FOR"}
+          options={["Men", "Women", "Baby & Kids"]}
+        />
         <hr />
-        <DropDownOptions title={"RAW MATERIALS"} />
+        <DropDownOptions
+          title={"RAW MATERIALS"}
+          options={["Men", "Women", "Baby & Kids"]}
+        />
         <hr />
-        <DropDownOptions title={"PATTERN"} />
+        <DropDownOptions
+          title={"PATTERN"}
+          options={["Men", "Women", "Baby & Kids"]}
+        />
         <hr />
         <button className={styles.button} onClick={toggle}>
           SUBMIT
