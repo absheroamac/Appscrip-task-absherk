@@ -34,9 +34,7 @@ const ProductCard = ({ product }) => {
       </div>
       <div className={style.bottom}>
         <p>
-          <Link href="/" passHref>
-            Sign in
-          </Link>{" "}
+          <Link href="/">Sign in</Link>
           or Create an account to see pricing
         </p>
         <LikeButton productId={product.id} initiallyLiked={product.isLiked} />
