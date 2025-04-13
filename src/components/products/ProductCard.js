@@ -35,7 +35,7 @@ const ProductCard = ({ product }) => {
       <div className={style.bottom}>
         <p>
           <Link href="/" passHref>
-            <a className={style.link}>Sign in</a>
+            Sign in
           </Link>{" "}
           or Create an account to see pricing
         </p>
