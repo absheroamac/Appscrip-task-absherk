@@ -7,6 +7,7 @@ import Header from "@/components/header/Header";
 import Hero from "@/components/Hero";
 import Products from "@/components/Products";
 import Product from "../assets/product/product1.png";
+import Footer from "@/components/Footer";
 
 export default async function Home({ searchParams }) {
   const { sort = "recommended" } = searchParams;
@@ -22,6 +23,7 @@ export default async function Home({ searchParams }) {
         totalCount={totalCount}
         query={searchParams}
       />
+      <Footer />
     </div>
   );
 }
@@ -33,11 +35,13 @@ async function fetchProducts({ sort }) {
       id: 1,
       title: "PPXOC Milkyway dress in pressed flowers",
       image: Product,
+      isNew: true,
     },
     {
       id: 2,
       title: "PPXOC Milkyway dress in pressed flowers",
       image: Product,
+      isOutOfStock: true,
     },
     {
       id: 3,

@@ -8,7 +8,7 @@ export function useFilterVisibility() {
 }
 
 export function FilterProvider({ children }) {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
   const toggle = () => setVisible((prev) => !prev);
 
   return (

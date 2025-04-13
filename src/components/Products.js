@@ -4,6 +4,7 @@ import DropDown from "./header/DropDown";
 import FilterPanel from "./products/FilterPanel";
 import { FilterProvider } from "./context/FilterContext";
 import styles from "./Products.module.css";
+import FilterButton from "./products/FilterButton";
 
 const sortBy = [
   "RECOMMENDED",
@@ -15,14 +16,27 @@ const sortBy = [
 
 const Products = async ({ products, totalCount }) => {
   return (
-    <div className="container">
+    <div className={`${styles.container} container`}>
       <FilterProvider>
-        <div className={styles.topBar}>
-          <span>
-            <span>{totalCount}</span> ITEM
-          </span>
-          <HideFilter />
-          <DropDown options={sortBy} />
+        <div className={styles.topBarContainer}>
+          <hr />
+          <div className={styles.topBar}>
+            <div className={`${styles.topBarFirstSet} ${styles.smHidden}`}>
+              <span>
+                <span>{totalCount}</span> ITEM
+              </span>
+
+              <HideFilter />
+            </div>
+            <div className={`${styles.smVisible} ${styles.filterButton}`}>
+              <FilterButton />
+            </div>
+            <div className={styles.divider}></div>
+            <div className={styles.sortBy}>
+              <DropDown options={sortBy} />
+            </div>
+          </div>
+          <hr />
         </div>
 
         <div className={styles.productLayout}>

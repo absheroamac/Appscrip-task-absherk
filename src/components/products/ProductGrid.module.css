@@ -12,7 +12,7 @@
 }
 
 /* When container is smaller than 900px, switch to 3 columns */
-@container product-grid (max-width: 900px) {
+@container product-grid (max-width: 950px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
   }

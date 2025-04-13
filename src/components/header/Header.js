@@ -8,6 +8,7 @@ import BagIcon from "../../assets/header/bag.svg";
 import DropDown from "./DropDown";
 import style from "./Header.module.css";
 import MenuIcon from "../../assets/header/menuIcon.svg";
+import MobileNav from "./MobileNav";
 
 const options = ["ENG", "SPA", "CHI", "JPN"];
 const menuItems = [
@@ -26,6 +27,7 @@ const Header = () => {
             <button className={style.menuIcon}>
               <MenuIcon />
             </button>
+
             <Logo className={style.logoIcon} />
           </div>
           <LogoText className={style.logoText} />
@@ -48,15 +50,18 @@ const Header = () => {
           </div>
         </div>
 
-        <nav>
+        <nav className={style.nav}>
           {menuItems.map((item, idx) => (
-            <a href={item.link} key={idx}>
+            <a href={item.link} key={idx} className={style.menuItems}>
               {item.title}
             </a>
           ))}
         </nav>
       </header>
       <hr></hr>
+      <nav className={style.mobileNav}>
+        <MobileNav headers={["HOME", "SHOP"]} current={"SHOP"} />
+      </nav>
     </div>
   );
 };

@@ -1,0 +1,19 @@
+.notActive {
+  color: #bfc8cd;
+}
+
+.active {
+  color: #000000;
+}
+
+.division {
+  width: 2px;
+  height: 100%;
+  background-color: #bfc8cd;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}

@@ -1,0 +1,50 @@
+.card {
+  width: 100%;
+  overflow: hidden;
+}
+
+.bottom {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.5rem 0rem;
+}
+
+.icon {
+  width: 20px;
+}
+
+.link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.newProductLabel {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.titleContainer h4 {
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.outOfStockLabel {
+  background-color: white;
+  padding: 1rem 0rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,5 +1,6 @@
 .productLayout {
   display: flex;
+  gap: 1rem;
 }
 
 .gridContainer {
@@ -8,9 +9,72 @@
   container-name: product-grid;
 }
 
+.container {
+  margin-bottom: 2rem;
+}
+
 .topBar {
-  display: flex;
-  justify-content: space-between;
+  margin: 1rem 0rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
+  position: relative;
+}
+
+.filterButton {
+  text-align: center;
+}
+.sortBy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topBarFirstSet {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-weight: bold;
+}
+
+.topBarContainer {
   margin-bottom: 1rem;
+}
+
+.smHidden {
+  display: none;
+}
+
+.smVisible {
+  display: block;
+}
+
+.divider {
+  height: 80%;
+  width: 4px;
+  background-color: #e5e5e5;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) {
+  .smHidden {
+    display: flex;
+  }
+
+  .smVisible {
+    display: none;
+  }
+
+  .topBar {
+    margin: 1rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .divider {
+    display: none;
+  }
 }

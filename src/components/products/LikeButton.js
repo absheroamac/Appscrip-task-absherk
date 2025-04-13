@@ -10,7 +10,19 @@ const LikeButton = ({ productId, initiallyLiked }) => {
     setIsLiked((prev) => !prev);
     //API Request to make it liked. using the productID
   };
-  return isLiked ? <LikeFilled /> : <Like />;
+  return isLiked ? (
+    <LikeFilled
+      width="20px"
+      height="
+  auto"
+    />
+  ) : (
+    <Like
+      width="20px"
+      height="
+auto"
+    />
+  );
 };
 
 export default LikeButton;

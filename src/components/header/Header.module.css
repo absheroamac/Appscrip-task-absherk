@@ -3,6 +3,23 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  width: 60px;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.menuItems {
+  display: none;
+  text-decoration: none;
+  color: black;
 }
 
 .headerDash {
@@ -22,12 +39,40 @@
   display: none;
 }
 
+.logoIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.mobileNav {
+  display: flex;
+  justify-content: flex-start;
+  margin: 2rem 0rem;
+}
+
 @media (min-width: 768px) {
   .smInvisible {
     display: block;
   }
 
+  .logoText {
+    width: 106px;
+  }
+
+  .logoIcon {
+    width: 36px;
+    height: 36px;
+  }
+
   .menuIcon {
+    display: none;
+  }
+
+  .menuItems {
+    display: block;
+  }
+
+  .mobileNav {
     display: none;
   }
 }
